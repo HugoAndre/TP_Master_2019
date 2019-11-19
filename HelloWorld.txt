@@ -1,4 +1,2 @@
-<<<<<<< HEAD
-un deux trois 4
-=======
->>>>>>> parent of 7fd1947... 1ere modif
+réparation du bug
+à la mano
