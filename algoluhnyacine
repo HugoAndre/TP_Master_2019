@@ -1,0 +1,43 @@
+def verif():
+    
+    code_str=input('entrez votre carte bancaire')
+    
+    liste = []
+    z = []
+    var = 0
+     
+    for i in code_str:
+            i = int(i)
+                 
+            if i%2 == 0:
+                liste.append(str(i*2))
+            else:
+                liste.append(str(i))
+     
+    for elem in liste:
+         
+        if int(elem) >= 10:
+            for j in elem:
+                var += int(j)
+            z.append(var)
+            var = 0
+        else:
+            z.append(int(elem))
+     
+    for i in z:
+        var += i
+    if var % 10 == 0:
+        print("Le code est bon bravo")
+    else:
+        print("votre carte est fausse")
+       
+    
+    print(z)
+    
+    if len(code_str)==12:
+       
+        return 'longueur de carte bonne'
+    else:
+        return 'votre code doit avoir 12 chiffres'
+result=verif()
+print(result)
